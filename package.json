@@ -1,0 +1,17 @@
+{
+  "name": "runjava",
+  "version": "0.0.2",
+  "description": "A command line tool to compile a java source file and run it.",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "preferGlobal": true,
+  "bin": {
+    "runjava": "index.js"
+  },
+  "author": "anubhav7495",
+  "license": "ISC",
+  "dependencies": {
+    "yargs": "^3.29.0"
+  }
+}
