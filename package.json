@@ -1,13 +1,13 @@
 {
   "name": "runjava",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "A command line tool to compile a java source file and run it.",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository" : { 
-    "type" : "git",
-    "url" : "https://github.com/anubhav7495/runjava.git"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/anubhav7495/runjava.git"
   },
   "preferGlobal": true,
   "bin": {
