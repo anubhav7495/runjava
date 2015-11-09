@@ -13,6 +13,15 @@
   "bin": {
     "runjava": "index.js"
   },
+ "keywords": [
+    "shell",
+    "spawn",
+    "process",
+    "java",
+    "javac",
+    "command",
+    "cmd"
+  ],
   "author": "anubhav7495",
   "license": "ISC",
   "dependencies": {
