@@ -1,10 +1,18 @@
 #! /usr/bin/env node
+var readline = require('readline');
+var spawn = require('child_process').spawn;
 
-var spawn = require('child_process').spawn,
-    javac    = spawn('javac', [process.argv[2] + '.java']);
+function std(optionObject) {
+  readline.createInterface(optionObject).on('line', function(line) {
+    console.log(line);
+  });
+}
 
-javac.stderr.on('data', function (data) {
-  console.log(data.toString());
+javac = spawn('javac', [process.argv[2] + '.java']);
+
+std({
+  input     : javac.stderr,
+  terminal  : false
 });
 
 javac.on('close', function (code) {
@@ -19,12 +27,14 @@ javac.on('close', function (code) {
 function execute() {
   run = spawn('java', [process.argv[2]]);
 
-  run.stdout.on('data', function (data) {
-  console.log(data.toString());
+  std({
+    input     : run.stdout,
+    terminal  : false
   });
 
-  run.stderr.on('data', function (data) {
-  console.log('stderr: ' + data);
+  std({
+    input     : run.stderr,
+    terminal  : false
   });
 
   run.on('close', function (code) {
